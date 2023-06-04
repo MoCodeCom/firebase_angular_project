@@ -1,0 +1,38 @@
+<div id="formContent">
+    <p>Information</p>
+    <form (ngSubmit)="onCreateCourse(f)" #f="ngForm">
+        <label for="courseName">Course Name</label><br>
+        <input name="courseName"
+               type="text"
+               ngModel
+               required/><br><br>
+
+        <label for="courseDescrption">Course Description</label><br>
+        <input name="courseDescrption"
+               type="text"
+               ngModel
+               required/><br><br>
+
+        <label for="courseDate">Course Date</label><br>
+        <div *ngIf="(percantage | async) as percantage">
+          <progress [value]="percantage"></progress>
+          <span>{{percantage / 100 | percent}}</span>
+        </div><br>
+        <input name="courseDate"
+               type="date"
+               ngModel
+               required/><br><br>
+
+        <input type="file"
+               (change)="onUploadFile($event)"
+               ngModel
+               name="uploadFile"/><br><br>
+        <img  *ngIf="iconUrl" [src]="iconUrl" style="width:100px"><br><br>
+        <hr>
+        <button type="submit"
+                [disabled]="f.invalid"
+                [ngStyle]="f.invalid?{'background-color':'gray'}:{'background-color':'green'}">Submit</button>
+        <button>Cancel</button>
+    </form><br>
+
+</div>

@@ -1,0 +1,31 @@
+<div id="body">
+    <p>Update Course Information</p>
+<form (ngSubmit)="onUpdateCourse(f)" #f="ngForm">
+    <label for="courseName">Course Name</label><br>
+    <input name="courseName" 
+           type="text"
+           ngModel
+           required
+           placeholder="{{oldDataToUpdate.courseName}}"/><br><br>
+
+    <label for="courseDescrption">Course Description</label><br>
+    <input name="courseDescrption"
+           type="text"
+           ngModel
+           required
+           placeholder="{{oldDataToUpdate.courseDescription}}"/><br><br>
+
+    <label for="courseDate">Course Date</label><br>
+    <input name="courseDate"
+           type="date"
+           ngModel
+           required
+           placeholder="{{oldDataToUpdate.courseDate}}"/><br><br>
+
+    <button type="submit"
+            [disabled]="f.invalid"
+            [ngStyle]="f.invalid?{'background-color':'gray'}:{'background-color':'green'}">Update</button>
+    <button style="background-color: rgb(190, 66, 66); color: white;"
+            (click)="onCancel()">Cancel</button>
+</form>
+</div>

@@ -1,0 +1,8 @@
+#formContent{
+    margin: 10px 50px;
+}
+
+#formContent form button{
+    margin: auto 10px;
+    width: 150px;
+}

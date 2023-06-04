@@ -1,0 +1,23 @@
+#form{
+    margin: 10px 50px;
+}
+
+#form a{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+#lists ul{
+    list-style-type: none;
+    display: flex;
+}
+
+#lists ul li{
+    margin: 3px;;
+}
+
+#productsList ul li{
+  margin-top: 20px;
+  list-style-type: none;
+
+}

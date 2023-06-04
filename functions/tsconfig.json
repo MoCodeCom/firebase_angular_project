@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "lib": ["ES2015","ES2015.Promise"]
+  },
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ]
+}

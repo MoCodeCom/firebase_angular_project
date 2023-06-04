@@ -1,0 +1,6 @@
+{
+  "hosting": [{
+    "target": "partwizard",
+    "public": "./firebaseapp/functions/src/index.ts"
+  }]
+}

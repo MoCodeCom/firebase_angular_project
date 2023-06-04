@@ -1,0 +1,28 @@
+#body_auth{
+    width: 100%;
+    height: 500px;
+    padding: 0px;
+    background-color: aliceblue;
+    display: flex;
+    
+}
+
+
+#form_auth{
+    width: 100%;
+    align-self: center;
+}
+
+#form_auth div{
+
+    text-align: center;
+    margin:15px auto 15px auto;
+}
+
+#submit_auth{
+    margin: auto 10px auto 10px;
+}
+
+#cancel_auth{
+    margin: auto 10px auto 10px;
+}

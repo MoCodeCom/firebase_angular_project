@@ -1,0 +1,4 @@
+-> to activate firebase in modules we will need to add compat 
+   after fire in url
+   import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+->

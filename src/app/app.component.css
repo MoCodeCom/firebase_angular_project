@@ -1,0 +1,18 @@
+#nav_bar ul{
+    display: flex;
+    justify-content: space-between;
+
+    list-style-type: none;
+}
+
+#nav_bar ul li a{
+    text-decoration: none;
+
+}
+
+#content{
+    /* border: double 1px blueviolet; */
+    height: 300px;
+    margin: 3% 10% 3% 10%;
+}
+

@@ -1,0 +1,22 @@
+
+<div id="nav_bar">
+    <ul>
+
+        <li><a
+          routerLinkActive="active"
+          routerLink="auth"
+          *ngIf="logBool==false"
+          (click)="login()">Login/SignIn</a></li>
+        <li><a routerLink="*" (click)="logout()" *ngIf="logBool==true">Logout</a></li>
+        <li><a routerLink="main">Main</a></li>
+        <li><a routerLink="products">Products</a></li>
+        <li><a routerLinkActive="active" routerLink="auth" (click)="loginlogout()">{{logString}}</a></li>
+        <li><a>{{userName}}</a></li>
+    </ul>
+
+</div>
+
+<div id="content">
+    <app-home></app-home>
+</div>
+

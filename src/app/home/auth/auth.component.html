@@ -1,0 +1,56 @@
+<!--
+<div id="firebaseui-auth-container">
+
+</div>-->
+<div id="body_auth">
+    <!--<app-loading
+    *ngIf="isLoading"
+    style="text-align: center;"
+    ></app-loading>-->
+
+    <form
+       (ngSubmit)="onSubmit(form_auth)"
+       #form_auth= "ngForm"
+       *ngIf="!isLoading"
+       id="form_auth"
+    >
+    <div
+    *ngIf="errorHtml"
+    style="background-color:rgb(242, 200, 200); color:rgb(142, 0, 0)"
+    >
+        <p>{{errorHtml}}</p>
+    </div>
+        <div>
+            <label for="email">E-Mail</label><br>
+            <input
+               type="email"
+               id="email"
+               ngModel
+               name="email"
+               required
+               email>
+        </div>
+        <div>
+            <label for="password">Password</label><br>
+            <input
+               type="password"
+               id="password"
+               name="password"
+               ngModel
+               required
+               minlength="6">
+        </div>
+        <div>
+            <button
+               id="submit_auth"
+               type="submit"
+               [disabled]="!form_auth.valid"
+               >
+                {{isLoginMode ? 'Sign Up' : 'Login'}}
+            </button> |
+            <button id="cancel_auth" (click)="onLogin()" type="button">
+                {{isLoginMode ? 'Swich Login' : 'Swich Sign Up'}}
+            </button>
+        </div>
+    </form>
+</div>
